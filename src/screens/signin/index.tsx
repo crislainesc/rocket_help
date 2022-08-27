@@ -7,7 +7,7 @@ import Logo from '../../assets/logo_primary.svg'
 import { Input } from '../../components/input'
 import { Button } from '../../components/button'
 
-export function SignIn() {
+export const SignIn: React.FC = () => {
   const [name, setName] = useState('')
   const [password, setPassword] = useState('')
 

@@ -5,7 +5,7 @@ type Props = IButtonProps & {
   title: string
 }
 
-export const Button = ({ title, ...rest }: Props) => {
+export const Button: React.FC<Props> = ({ title, ...rest }: Props) => {
   return (
     <ButtonNativeBase bg="green.700" h={14} fontSize="sm" _pressed={{ bg: 'green.500' }} {...rest}>
       <Heading color="white" fontSize="sm">
