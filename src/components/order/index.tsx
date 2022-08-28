@@ -20,13 +20,18 @@ export const Order: React.FC<Props> = ({ data, ...rest }: Props) => {
 
   return (
     <Pressable {...rest}>
-      <HStack bg="gray.600" mb={4} alignItems="center" justifyContent="space-between" rounded="sm" overflow="hidden">
+      <HStack bg="gray.600" mb={4} alignItems="center" justifyContent="space-around" rounded="sm" overflow="hidden">
         <Box h="full" w={2} bg={statusColor} />
-        <VStack flex={1} my={5} ml={5}>
-          <ClockAfternoon size={15} color={colors.gray[300]} />
-          <Text color="gray.200" fontSize="xs" ml={1}>
-            {data.when}
+        <VStack flex={1} my={5} ml={5} flexGrow={4}>
+          <Text color="white" fontSize="md" fontWeight="bold">
+            {data.patrimony}
           </Text>
+          <HStack alignItems="center" mt={2}>
+            <ClockAfternoon size={15} color={colors.gray[300]} />
+            <Text color="gray.200" fontSize="xs" ml={1}>
+              {data.when}
+            </Text>
+          </HStack>
         </VStack>
         <Circle bg="gray.500" h={12} w={12} mr={5}>
           {data.status === 'closed' ? (
